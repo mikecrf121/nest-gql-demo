@@ -1,0 +1,38 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Doctor {
+  id: Int!
+  name: String!
+  type: String
+  networkProviderId: Float!
+  networkProvider: NetworkProvider!
+}
+
+type NetworkProvider {
+  id: Int!
+  name: String!
+  doctors: Doctor
+}
+
+type Query {
+  doctors: [Doctor!]!
+  networkProviders: [NetworkProvider!]!
+  networkProvider(id: Int!): NetworkProvider!
+}
+
+type Mutation {
+  createDoctor(createDoctorInput: CreateDoctorInput!): Doctor!
+  createNetworkProvider(createNetworkProviderInput: CreateNetworkProviderInput!): NetworkProvider!
+}
+
+input CreateDoctorInput {
+  name: String!
+  networkProviderId: Float!
+  type: String
+}
+
+input CreateNetworkProviderInput {
+  name: String!
+}
