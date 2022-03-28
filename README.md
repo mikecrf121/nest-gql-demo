@@ -25,6 +25,9 @@
 ## Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This is the final code for the NestJS introduction sample lab, utilizing GraphQL, MySQL, TypeORM.
+
+This project shows the power of GraphQL by making an API that creates network providers and doctors found within them.  One network provider may have many doctors, while many doctors have one network provider. The power point is included within this projects files.
 
 ## Installation
 
